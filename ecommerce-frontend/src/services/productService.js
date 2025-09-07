@@ -131,10 +131,8 @@ export const getProducts = async (filters = {}) => {
       )
     );
 
-    console.log('Sending filters to API:', cleanFilters);
     
     const response = await api.get('/products', { params: cleanFilters });
-    console.log('API response:', response.data);
     
     return response.data;
   } catch (error) {

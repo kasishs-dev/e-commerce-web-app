@@ -19,10 +19,9 @@ export default function ServerStatus() {
           setIsServerOnline(false);
         }
       } catch (error) {
-        console.error('Server status check failed:', error);
         setIsServerOnline(false);
       } finally {
-        setIsChecking(false);
+        setIsChecking(false); 
       }
     };
 

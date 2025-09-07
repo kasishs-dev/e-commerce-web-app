@@ -33,7 +33,6 @@ export default function AdminProducts() {
   const updateMutation = useMutation({
     mutationFn: updateProduct,
     onSuccess: (data) => {
-      console.log('Product updated successfully:', data);
       invalidateProductQueries(queryClient);
       setEditingProduct(null);
       setShowForm(false);

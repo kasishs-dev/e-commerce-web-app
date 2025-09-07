@@ -9,16 +9,6 @@ export default function Navigation() {
   const { totalItems, items, isLoading: cartLoading } = useSelector((state) => state.cart);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   
-  // Debug logging
-  useEffect(() => {
-    console.log('Navigation - Cart state:', { 
-      totalItems, 
-      itemsCount: items?.length,
-      cartLoading,
-      items: items?.slice(0, 3) // Show first 3 items for debugging
-    });
-  }, [totalItems, items, cartLoading]);
-
   const handleLogout = () => {
     logout();
     setIsMobileMenuOpen(false);
