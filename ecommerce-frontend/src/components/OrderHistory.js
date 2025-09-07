@@ -49,7 +49,7 @@ export default function OrderHistory({ orders, isLoading, error }) {
           </table>
         </div>
       ) : (
-        <p>You haven't placed any orders yet.</p>
+        <p>You haven&apos;t placed any orders yet.</p>
       )}
     </div>
   );

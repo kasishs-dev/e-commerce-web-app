@@ -35,7 +35,7 @@ export default function OrderConfirmation() {
       <div className="container mx-auto px-4 py-8">
         <div className="text-center">
           <h1 className="text-2xl font-bold text-red-600 mb-4">Order Not Found</h1>
-          <p className="text-gray-600 mb-6">The order you're looking for doesn't exist or you don't have permission to view it.</p>
+          <p className="text-gray-600 mb-6">The order you&apos;re looking for doesn&apos;t exist or you don&apos;t have permission to view it.</p>
           <Link href="/" className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700">
             Continue Shopping
           </Link>
@@ -162,9 +162,9 @@ export default function OrderConfirmation() {
         <div className="mt-8 bg-blue-50 p-6 rounded-lg">
           <h3 className="text-lg font-semibold mb-4">Order Tracking</h3>
           <div className="space-y-2 text-sm">
-            <p>• You can track your order status in the "My Orders" section</p>
-            <p>• You can cancel your order before the delivery date</p>
-            <p>• You'll receive email updates about your order status</p>
+          <p>• You can track your order status in the &quot;My Orders&quot; section</p>
+          <p>• You can cancel your order before the delivery date</p>
+          <p>• You&apos;ll receive email updates about your order status</p>
             <p>• For any questions, contact our customer support</p>
           </div>
         </div>

@@ -1,5 +1,5 @@
 // pages/admin/users.js
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { useAuth } from '../../context/AuthContext';
 import { useRouter } from 'next/router';
@@ -14,16 +14,22 @@ export default function AdminUsers() {
   const [searchTerm, setSearchTerm] = useState('');
   const [roleFilter, setRoleFilter] = useState('all');
   const [sortBy, setSortBy] = useState('name');
+  const [isAuthorized, setIsAuthorized] = useState(false);
 
-  // Redirect if not admin
-  if (!isAuthenticated() || user?.role !== 'admin') {
-    router.push('/login');
-    return null;
-  }
+  // Check authorization on mount
+  useEffect(() => {
+    if (isAuthenticated() && user?.role === 'admin') {
+      setIsAuthorized(true);
+    } else {
+      router.push('/login');
+    }
+  }, [isAuthenticated, user, router]);
 
+  // Only run queries if authorized
   const { data: users, isLoading, error } = useQuery({
     queryKey: ['users'],
     queryFn: getUsers,
+    enabled: isAuthorized, // Only run if authorized
   });
 
   const updateRoleMutation = useMutation({
@@ -39,6 +45,11 @@ export default function AdminUsers() {
       queryClient.invalidateQueries({ queryKey: ['users'] });
     },
   });
+
+  // Don't render if not authorized
+  if (!isAuthorized) {
+    return null;
+  }
 
   // Filter and sort users
   const filteredUsers = users?.filter(user => {

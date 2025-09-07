@@ -110,7 +110,7 @@ export default function SearchFilter({ onFilter }) {
             <div>
               <h2 className="text-xl font-bold text-white">Search & Filter</h2>
               <p className="text-blue-100 text-sm">
-                Find exactly what you're looking for
+                Find exactly what you&apos;re looking for
               </p>
             </div>
           </div>

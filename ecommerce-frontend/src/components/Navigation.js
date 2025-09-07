@@ -39,7 +39,7 @@ export default function Navigation() {
           <div className="flex justify-between h-16">
             <div className="flex items-center">
               <Link href="/" className="text-xl font-bold text-gray-800">
-                Kasish's E-Commerce
+                Kasish&apos;s E-Commerce
               </Link>
             </div>
             <div className="flex items-center space-x-4">
@@ -58,7 +58,7 @@ export default function Navigation() {
           {/* Logo */}
           <div className="flex items-center">
             <Link href="/" className="text-xl font-bold text-gray-800">
-              Kasish's E-Commerce
+              Kasish&apos;s E-Commerce
             </Link>
           </div>
 

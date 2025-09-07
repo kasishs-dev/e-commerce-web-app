@@ -114,7 +114,7 @@ export default function OrderDetailPage() {
       <div className="container mx-auto px-4 py-8">
         <div className="text-center">
           <h2 className="text-2xl font-bold text-gray-600 mb-4">Order Not Found</h2>
-          <p className="text-gray-600 mb-4">The order you're looking for doesn't exist or you don't have permission to view it.</p>
+          <p className="text-gray-600 mb-4">The order you&apos;re looking for doesn&apos;t exist or you don&apos;t have permission to view it.</p>
           <Link href="/orders" className="btn-primary">
             My Orders
           </Link>
