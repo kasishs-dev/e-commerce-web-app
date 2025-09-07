@@ -16,8 +16,7 @@ export const useNetworkStatus = () => {
     // Check server reachability
     const checkServerStatus = async () => {
       try {
-        const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000'}/api/health`, {
-          method: 'GET',
+        const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api'}/health`, {          method: 'GET',
           timeout: 5000,
         });
         setIsServerReachable(response.ok);
